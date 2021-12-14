@@ -11,7 +11,7 @@ contract KycContract is Ownable {
     }
 
     function setKycRevoked(address _addr) public onlyOwner {
-        allowed[_addr] = true;
+        allowed[_addr] = false;
     }
 
     function kycCompleted(address _addr) public view returns(bool) {
